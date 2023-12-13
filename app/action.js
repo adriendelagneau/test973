@@ -19,6 +19,7 @@ export const getSeries = async (pageNumber = 1) => {
         // Fetch series data with a limit and skip
         const result = await Series.find().skip(skip).limit(SERIES_LIMIT);
 
+       
         // Convert MongoDB object to plain object
         const plainObject = JSON.parse(JSON.stringify(result));
 
